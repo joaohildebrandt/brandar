@@ -1,0 +1,4 @@
+.corner-cell {
+    width: var(--brandar-grid-view-hour-cell-width);
+    border-right: 1px solid #e1e1e1;
+}

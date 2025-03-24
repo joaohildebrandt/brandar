@@ -1,0 +1,18 @@
+.day-cell {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2;
+  height: 100%;
+}
+
+.day-cell-week-day {
+  font-size: 0.725rem;
+  text-align: center;
+}
+
+.day-cell-day {
+  font-size: 1rem;
+  text-align: center;
+}

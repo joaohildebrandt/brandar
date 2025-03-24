@@ -1,0 +1,5 @@
+.calendar {
+  :global(*) {
+    box-sizing: border-box;
+  }
+}

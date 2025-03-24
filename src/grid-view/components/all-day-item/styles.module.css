@@ -1,0 +1,7 @@
+.all-day-item {
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  overflow: hidden;
+  user-select: none;
+}

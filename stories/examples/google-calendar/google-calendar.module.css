@@ -1,0 +1,89 @@
+.google-calendar-container {
+  height: calc(100vh - 30px);
+  background: #fff;
+  border-radius: 28px;
+  font-family: "Roboto", Arial, sans-serif;
+}
+
+.google-calendar-corner-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  padding-right: 8px;
+}
+
+.google-calendar-corner-cell-text {
+  color: #444746;
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.00625rem;
+  line-height: 1rem;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+.google-calendar-header {
+  background: #fff;
+  height: 80px;
+  border: none;
+}
+
+.google-calendar-corner-cell {
+  background: #fff;
+}
+
+.google-calendar-day-cell {
+  font-weight: 500;
+  color: #444;
+  background: #fff;
+  position: relative;
+  padding-top: 8px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.google-calendar-day-cell-week-day {
+  color: #444746;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.google-calendar-day-cell-day {
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
+  font-size: 26px;
+  line-height: 46px;
+  font-weight: 400;
+}
+
+.google-calendar-day-cell-today {
+  color: #1967d2;
+  font-weight: 700;
+  background: #e8f0fe;
+  border-radius: 6px;
+}
+
+.google-calendar-hours-column {
+  background: #f8f9fa;
+  border-right: 1px solid #e0e0e0;
+}
+
+.google-calendar-hour-cell {
+  color: #444746;
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.00625rem;
+  line-height: 1rem;
+  -webkit-font-smoothing: subpixel-antialiased;
+  text-align: right;
+  padding-right: 8px;
+}
+
+.google-calendar-hour-cell:first-child {
+  opacity: 0;
+}
+
+.google-calendar-body {
+  background: #fff;
+}

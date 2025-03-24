@@ -1,0 +1,22 @@
+.wrapper {
+  display: flex;
+  position: absolute;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  align-items: center;
+}
+
+.line {
+  margin-left: 0.25rem;
+  border-radius: 9999px;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #ef4444;
+}
+
+.dot {
+  flex: 1 1 0%;
+  height: 1px;
+  background-color: #ef4444;
+}

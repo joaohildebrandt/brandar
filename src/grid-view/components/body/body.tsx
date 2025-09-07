@@ -1,12 +1,12 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef } from "react";
 
-import { useAction } from '../../../core/hooks/use-action';
-import { useStore } from '../../../core/hooks/use-store';
-import { cn } from '../../../utils/style';
+import { useAction } from "../../../core/hooks/use-action";
+import { useStore } from "../../../core/hooks/use-store";
+import { cn } from "../../../utils/style";
 
-import styles from './styles.module.css';
+import styles from "./styles.module.css";
 
-export const Body = ({
+export const BodyWrapper = ({
   className,
   children,
   ...props
@@ -20,7 +20,6 @@ export const Body = ({
   const scrollToCurrentTime = useStore(
     (state) => state.gridView.scrollToCurrentTime,
   );
-  console.log(scrollToCurrentTime);
 
   const bodyRef = useRef<HTMLDivElement>(null);
 
@@ -33,7 +32,7 @@ export const Body = ({
 
       bodyRef?.current?.scrollTo({
         top: Math.max(0, scrollPosition),
-        behavior: 'smooth',
+        behavior: "smooth",
       });
 
       actions.gridView.resetScrollToCurrentTime();
@@ -42,9 +41,19 @@ export const Body = ({
 
   return (
     <div className={styles.bodyWrapper} ref={bodyRef}>
-      <div {...props} className={cn(styles.body, className)}>
-        {children}
-      </div>
+      {children}
+    </div>
+  );
+};
+
+export const Body = ({
+  className,
+  children,
+  ...props
+}: React.HTMLAttributes<HTMLDivElement>) => {
+  return (
+    <div {...props} className={cn(styles.body, className)}>
+      {children}
     </div>
   );
 };

@@ -1,7 +1,7 @@
-import { atom, computed } from 'nanostores';
-import type { PreinitializedWritableAtom, ReadableAtom } from 'nanostores';
+import { atom, computed } from "nanostores";
+import type { PreinitializedWritableAtom, ReadableAtom } from "nanostores";
 
-import { merge } from '../../utils/object';
+import { merge } from "../../utils/object";
 
 import {
   generateDayForPeriod,
@@ -9,17 +9,17 @@ import {
   generateNextPeriod,
   generatePreviousPeriod,
   generateWeek,
-} from '../../helpers/calendar';
-import { onSetMemo } from '../../helpers/store';
-import type { DeepPartial } from '../../types';
-import { CalendarPeriodTypeEnum } from './types';
-import type { CalendarConfig, CalendarPeriod } from './types';
+} from "../../helpers/calendar";
+import { onSetMemo } from "../../helpers/store";
+import type { DeepPartial } from "../../types";
+import { CalendarPeriodTypeEnum } from "./types";
+import type { CalendarConfig, CalendarPeriod } from "./types";
 
 const DEFAULT_CONFIG: CalendarConfig = {
   startHour: 0,
   accessors: {
-    start: 'start',
-    end: 'end',
+    start: "start",
+    end: "end",
   },
   timeGrid: {
     defaultDurationMinutes: 15,

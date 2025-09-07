@@ -1,9 +1,9 @@
-import { createContext, memo, useContext } from 'react';
+import { createContext, memo, useContext } from "react";
 
-import { cn } from '../../../utils/style';
+import { cn } from "../../../utils/style";
 
-import { useStore } from '../../../core/hooks/use-store';
-import styles from './styles.module.css';
+import { useStore } from "../../../core/hooks/use-store";
+import styles from "./styles.module.css";
 
 type TimeGridColumnProps = { day: Date } & React.HTMLAttributes<HTMLDivElement>;
 
@@ -14,7 +14,7 @@ export const useTimeGridColumn = () => {
 
   if (!context) {
     throw new Error(
-      'useTimeGridColumn should be used within TimeGridColumn component',
+      "useTimeGridColumn should be used within TimeGridColumn component",
     );
   }
 
@@ -24,15 +24,15 @@ export const useTimeGridColumn = () => {
 export const TimeGridColumn = memo(
   ({ className, children, day, ...props }: TimeGridColumnProps) => {
     return (
-      <div
-        {...props}
-        className={cn(styles.timeGridColumn, className)}
-        data-time-grid-column="true"
-      >
-        <TimeGridColumnContext value={{ day }}>
+      <TimeGridColumnContext.Provider value={{ day }}>
+        <div
+          {...props}
+          className={cn(styles.timeGridColumn, className)}
+          data-time-grid-column="true"
+        >
           {children}
-        </TimeGridColumnContext>
-      </div>
+        </div>
+      </TimeGridColumnContext.Provider>
     );
   },
 );

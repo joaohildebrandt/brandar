@@ -1,8 +1,8 @@
-import { memo, useMemo } from 'react';
-import { cn } from '../../../utils/style';
+import { memo, useMemo } from "react";
+import { cn } from "../../../utils/style";
 
-import { useStore } from '../../../core/hooks/use-store';
-import styles from './styles.module.css';
+import { useStore } from "../../../core/hooks/use-store";
+import styles from "./styles.module.css";
 
 type HourCellProps = {
   hour: number;
@@ -19,8 +19,8 @@ export const HourCell = memo(({ hour, className, ...props }: HourCellProps) => {
   } = useStore((state) => state.gridView.config);
 
   const formattedHour = useMemo(() => {
-    if (hour === 0) return '12 AM';
-    if (hour === 12) return '12 PM';
+    if (hour === 0) return "12 AM";
+    if (hour === 12) return "12 PM";
     return hour < 12 ? `${hour} AM` : `${hour - 12} PM`;
   }, [hour]);
 
@@ -34,7 +34,7 @@ export const HourCell = memo(({ hour, className, ...props }: HourCellProps) => {
         width,
       }}
     >
-      {formattedHour}
+      <span>{formattedHour}</span>
     </div>
   );
 });

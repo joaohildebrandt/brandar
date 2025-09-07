@@ -1,0 +1,93 @@
+* {
+  font-family: Roboto, Arial, sans-serif;
+}
+
+.grid-view-container {
+  background: #fff;
+  border-radius: 28px;
+  height: calc(100vh - 20px);
+  padding: 0 8px;
+}
+
+.grid-view-header {
+  border: none;
+}
+
+.grid-view-corner-cell {
+  border: none;
+}
+
+.grid-view-day-cell {
+  gap: 0;
+}
+
+.grid-view-day-cell-week-day {
+  line-height: 32px;
+  color: #444746;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.grid-view-day-cell-day {
+  font-size: 26px;
+  line-height: 46px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: unset;
+  text-decoration: none;
+  position: relative;
+  padding-inline: 8px;
+}
+
+.grid-view-all-day-corner-cell {
+  color: #444746;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.00625rem;
+  line-height: 1rem;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+.grid-view-all-day-cell:last-child {
+  border-right: 1px solid rgba(0, 0, 0, 0);
+}
+
+.grid-view-hour-cell {
+  border: none;
+  text-align: right;
+  padding-right: 8px;
+  > span {
+    display: inline-block;
+    transform: translateY(-50%);
+  }
+}
+
+.grid-view-hour-cell:first-child {
+  > span {
+    display: none;
+  }
+}
+
+.grid-view-time-grid-column {
+  border: none;
+  border-right: 1px solid #dde3ea;
+}
+
+.grid-view-time-grid-column:nth-last-child(1) {
+  border-right: 1px solid transparent;
+}
+
+.grid-view-time-grid-cell {
+  border-right: none;
+}
+
+.grid-view-item {
+  background-color: rgb(216, 27, 96);
+  color: #fff;
+  font-size: 12px;
+  padding-left: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}

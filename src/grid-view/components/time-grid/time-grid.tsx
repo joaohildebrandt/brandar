@@ -1,8 +1,8 @@
-import { memo } from 'react';
-import { cn } from '../../../utils/style';
+import { memo } from "react";
+import { cn } from "../../../utils/style";
 
-import { useStore } from '../../../core/hooks/use-store';
-import style from './styles.module.css';
+import { useStore } from "../../../core/hooks/use-store";
+import style from "./styles.module.css";
 
 type TimeGridProps = {
   className?: string;
@@ -10,7 +10,7 @@ type TimeGridProps = {
     days: Date[];
     hours: readonly number[];
   }) => React.ReactNode;
-} & Omit<React.HTMLAttributes<HTMLDivElement>, 'children'>;
+} & Omit<React.HTMLAttributes<HTMLDivElement>, "children">;
 
 export const TimeGrid = memo(
   ({ className, children, ...props }: TimeGridProps) => {
@@ -22,9 +22,9 @@ export const TimeGrid = memo(
         {...props}
         className={cn(style.timeGrid, className)}
         style={{
-          display: 'grid',
+          display: "grid",
           gridTemplateColumns: `repeat(${days.length}, 1fr)`,
-          width: '100%',
+          width: "100%",
         }}
       >
         {children({

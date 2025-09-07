@@ -4,15 +4,18 @@
   "type": "module",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
+      "types": "./dist/src/index.d.ts",
       "import": "./dist/index.js"
     }
   },
   "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "files": ["dist"],
+  "types": "./dist/src/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "rslib build",
+    "build:watch": "rslib build --watch",
     "build:storybook": "storybook build",
     "check": "biome check --write",
     "dev": "rslib build --watch",
@@ -60,5 +63,6 @@
     "postcss-loader": "^8.1.1",
     "tailwind-merge": "^3.0.2",
     "tailwindcss": "^4.0.15"
-  }
+  },
+  "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610"
 }

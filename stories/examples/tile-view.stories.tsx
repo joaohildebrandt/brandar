@@ -1,16 +1,16 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import { useState } from 'react';
+import type { Meta, StoryObj } from "@storybook/react";
+import { useState } from "react";
 
-import { Calendar } from '../../src/core/components/calendar';
-import { useCalendar } from '../../src/core/hooks/use-calendar';
-import { GridCell } from '../../src/tile-view/components/grid-cell/grid-cell';
-import { Grid } from '../../src/tile-view/components/grid/grid';
-import { Header } from '../../src/tile-view/components/header/header';
-import { View } from '../../src/tile-view/components/view/view';
-import { ITEMS } from '../data/items';
+import { Calendar } from "../../src/core/components/calendar";
+import { useCalendar } from "../../src/core/hooks/use-calendar";
+import { GridCell } from "../../src/tile-view/components/grid-cell/grid-cell";
+import { Grid } from "../../src/tile-view/components/grid/grid";
+import { Header } from "../../src/tile-view/components/header/header";
+import { View } from "../../src/tile-view/components/view/view";
+import { ITEMS } from "../data/items";
 
 const meta = {
-  title: 'Calendar - Tile View',
+  title: "Calendar - Tile View",
   component: View,
 } satisfies Meta<typeof View>;
 
@@ -34,10 +34,10 @@ export const Primary: Story = {
       useCalendar({
         period: {
           period: 1,
-          type: 'month',
+          type: "month",
         },
         items,
-        config: { accessors: { start: 'start_date' } },
+        config: { accessors: { start: "start_date" } },
       });
 
     const onPreviousPeriodClick = () => {
@@ -58,7 +58,7 @@ export const Primary: Story = {
         </button>
         <button
           type="button"
-          onClick={() => setPeriod({ period: 1, type: 'week' })}
+          onClick={() => setPeriod({ period: 1, type: "week" })}
         >
           define
         </button>
@@ -84,7 +84,10 @@ export const Primary: Story = {
             {({ days }) => (
               <>
                 {days.map((day) => (
-                  <GridCell key={day.toDateString()}>{day.getDate()}</GridCell>
+                  <GridCell key={day.toDateString()}>
+                    {day.getDate()}
+                    hudshudshudhs
+                  </GridCell>
                 ))}
               </>
             )}

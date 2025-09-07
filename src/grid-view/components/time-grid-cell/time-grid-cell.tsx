@@ -1,8 +1,8 @@
-import { memo } from 'react';
-import { cn } from '../../../utils/style';
+import { memo } from "react";
+import { cn } from "../../../utils/style";
 
-import { useStore } from '../../../core/hooks/use-store';
-import styles from './styles.module.css';
+import { useStore } from "../../../core/hooks/use-store";
+import styles from "./styles.module.css";
 
 type CellProps = React.DetailedHTMLProps<
   React.HTMLAttributes<HTMLDivElement>,

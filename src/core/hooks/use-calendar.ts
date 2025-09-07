@@ -1,24 +1,24 @@
-import { useEffect } from 'react';
-import type { CalendarItem } from '../../../core/store/calendar-item/types';
+import { useEffect } from "react";
+import type { CalendarItem } from "../../../core/store/calendar-item/types";
 import type {
   CalendarConfig,
   CalendarPeriod,
-} from '../../../core/store/calendar/types';
+} from "../../../core/store/calendar/types";
 
-import type { DeepPartial } from '../../../core/types';
-import { useAction } from './use-action';
-import { useStore } from './use-store';
+import type { DeepPartial } from "../../../core/types";
+import { useAction } from "./use-action";
+import { useStore } from "./use-store";
 
 type UseCalendarOptions = {
   period?: CalendarPeriod;
-  items: CalendarItem[];
+  items?: CalendarItem[];
   config?: DeepPartial<CalendarConfig>;
 };
 
 export const useCalendar = (
   options: UseCalendarOptions = {
     items: [],
-    period: { period: 1, type: 'week' },
+    period: { period: 1, type: "week" },
   },
 ) => {
   const date = useStore((state) => state.calendar.date);
@@ -34,7 +34,7 @@ export const useCalendar = (
       actions.calendar.setPeriod(options?.period);
     }
     if (options?.config) actions.calendar.setConfig(options?.config);
-  }, [options?.items, options.period, options?.config, actions]);
+  }, []);
 
   return {
     nextPeriod,

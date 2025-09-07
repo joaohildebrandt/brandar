@@ -1,9 +1,9 @@
-import { format, isToday as isTodayDate } from 'date-fns';
-import { createContext, memo, useContext, useMemo } from 'react';
+import { format, isToday as isTodayDate } from "date-fns";
+import { createContext, memo, useContext, useMemo } from "react";
 
-import { cn } from '../../../utils/style';
+import { cn } from "../../../utils/style";
 
-import styles from './styles.module.css';
+import styles from "./styles.module.css";
 
 const DayCellContext = createContext({} as { isToday: boolean; day: Date });
 
@@ -11,7 +11,7 @@ const useDayCell = () => {
   const context = useContext(DayCellContext);
 
   if (!context) {
-    throw new Error('useDayCell must be used within a DayCellContext.Provider');
+    throw new Error("useDayCell must be used within a DayCellContext.Provider");
   }
 
   return context;
@@ -29,11 +29,11 @@ export const DayCellDay = memo(
 
     return (
       <div
-        data-is-today-date={isToday}
+        data-istodaydate={isToday}
         className={cn(styles.dayCellDay, className)}
         {...props}
       >
-        {format(day, 'd')}
+        {format(day, "d")}
       </div>
     );
   },
@@ -50,11 +50,11 @@ export const DayCellWeekDay = ({
 
   return (
     <div
-      data-is-today-date={isToday}
+      data-istodaydate={isToday}
       className={cn(styles.dayCellWeekDay, className)}
       {...props}
     >
-      {format(day, 'EEE')}
+      {format(day, "EEE")}
     </div>
   );
 };
@@ -74,10 +74,10 @@ export const DayCell = memo(
       <DayCellContext.Provider value={{ day, isToday }}>
         <div
           {...props}
-          data-is-today-date={isToday}
+          data-istodaydate={isToday}
           className={cn(
             styles.dayCell,
-            isToday ? 'bg-blue-50' : 'bg-gray-50',
+            isToday ? "bg-blue-50" : "bg-gray-50",
             className,
           )}
         >

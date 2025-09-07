@@ -1,12 +1,12 @@
-import { atom } from 'nanostores';
-import type { PreinitializedWritableAtom } from 'nanostores';
+import { atom } from "nanostores";
+import type { PreinitializedWritableAtom } from "nanostores";
 
-import { merge } from '../../utils/object';
+import { merge } from "../../utils/object";
 
-import { onSetMemo } from '../../helpers/store';
-import type { DeepPartial } from '../../types';
-import type { CalendarConfig } from '../calendar/types';
-import type { GridViewConfig } from './types';
+import { onSetMemo } from "../../helpers/store";
+import type { DeepPartial } from "../../types";
+import type { CalendarConfig } from "../calendar/types";
+import type { GridViewConfig } from "./types";
 
 const DEFAULT_CONFIG: GridViewConfig = {
   cell: { hour: { height: 80, width: 60 } },
@@ -35,7 +35,7 @@ export const generateGridViewStore = () => {
 };
 
 export const generateGridViewActions = (store: GridViewStore) => {
-  const setConfig = (config: DeepPartial<CalendarConfig>) => {
+  const setConfig = (config: DeepPartial<GridViewConfig>) => {
     store.config.set(merge(store.config.get(), config));
   };
 

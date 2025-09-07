@@ -2,8 +2,6 @@
   overflow: auto;
 }
 .body {
-  position: relative;
   display: flex;
-  flex: 1;
-  border-top: 1px solid #e1e1e1;
+  position: relative;
 }

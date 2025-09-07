@@ -1,8 +1,8 @@
-import { memo } from 'react';
-import { useStore } from '../../../core';
-import { cn } from '../../../utils/style';
+import { memo } from "react";
+import { useStore } from "../../../core";
+import { cn } from "../../../utils/style";
 
-import styles from './styles.module.css';
+import styles from "./styles.module.css";
 
 export const CornerCell = memo(
   ({
@@ -16,11 +16,12 @@ export const CornerCell = memo(
         hour: { width },
       },
     } = useStore((state) => state.gridView.config);
+
     return (
       <div
+        {...props}
         className={cn(styles.cornerCell, className)}
         style={{ ...style, width }}
-        {...props}
       >
         {children}
       </div>

@@ -1,6 +1,6 @@
-import { cn } from '../../../utils/style';
+import { cn } from "../../../utils/style";
 
-import styles from './styles.module.css';
+import styles from "./styles.module.css";
 
 type GridCellProps = React.DetailedHTMLProps<
   React.HTMLAttributes<HTMLDivElement>,
